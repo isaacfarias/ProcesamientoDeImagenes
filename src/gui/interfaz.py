@@ -26,12 +26,12 @@ class VentanaPrincipal:
       self.hbox = gtk.HBox(False, 0)
       self.vbox = gtk.VBox(False, 0)
       
+      self.boton1SeleccionarArchivo = gtk.FileChooserButton('Selecciona un archivo')
+      self.videoViewPort = gtk.ViewPort()
+      
       self.hbox.pack_start(self.vbox,True,True,0)
-      
-      self.fileChooser = gtk.FileChooserButton('Selecciona un archivo')
-      self.file = None
-      
-      self.vbox.pack_start(self.fileChooser,True,True, 0)
+      self.vbox.pack_start(self.boton1SeleccionarArchivo,True,True, 0)
+      self.vbox.pack_end(self.videoViewPort,True,True,0)
       self.vbox.show()
       self.hbox.show()
       self.fileChooser.show()
